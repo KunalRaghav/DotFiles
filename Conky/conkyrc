@@ -1,0 +1,62 @@
+conky.config = {
+   background = true,
+update_interval = 1,
+
+double_buffer = true,
+no_buffers = true,
+text_buffer_size = 2048,
+
+gap_x = 10,
+gap_y = 35,
+minimum_width = 200, minimum_height = 200,
+
+own_window = true,
+own_window_type = 'dock',
+
+own_window_argb_visual = true,
+own_window_transparent = true,
+
+own_window_transparent = true,
+own_window_argb_visual = true,
+
+own_window_class = 'conky-semi',
+own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+border_inner_margin = 0,
+border_outer_margin = 0,
+
+-- EDIT THIS TO CHANGE POSITION
+alignment = 'top_left',
+
+draw_shades = false,
+draw_outline = false,
+draw_borders = false,
+draw_graph_borders = false,
+
+override_utf8_locale = true,
+use_xft = true,
+font = 'Open Sans Light:size=20',
+xftalpha = 0.5,
+uppercase = false,
+
+-- Defining colors
+default_color = '#4BA6C3',
+};
+
+conky.text = [[
+${voffset 5}${font Monoton:size=30}Kunal  Raghav ${font}${voffset -5}
+${voffset -15}${font Manjari size:25}_____________________________${font}${voffset 15}
+${voffset -40}${font Pacifico:size=35}${time %A}${font}${voffset -5}
+${voffset 5}${font Raleway Light:size=20}${time %B} ${time %e}${font}${voffset -5}
+${voffset 15}${font Manjari Thin:size=40}${time %I:%M %p}${font}${voffset -5}
+${voffset -15}${font Manjari size:25}_____________________________${font}${voffset 15}
+${voffset -25}${font Uroob:size=18}BATTERY: ${battery BAT1}${font}${voffset 10}
+${voffset -25}${battery_bar 5,231 BAT1}${voffset 15}
+${voffset -30}${font Uroob:size=18}REMAINING: ${battery_time BAT1}${font}${voffset 5}
+${voffset -35}${font Manjari size:25}_____________________________${font}${voffset 15}
+${voffset -25}${font Uroob:size=18}USED RAM: ${mem}${font}${voffset 10}
+${voffset -25}${membar 5,231 }${voffset 15}
+${voffset -25}${font Uroob:size=18}FREE RAM: ${memeasyfree}${font}${voffset 10}
+${voffset -40}${font Manjari size:25}_____________________________${font}${voffset 15}
+
+
+]]; 
